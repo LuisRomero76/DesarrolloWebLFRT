@@ -1,0 +1,33 @@
+h1 {
+    color: red;
+    font-size: 5px;
+    text-align: center;
+}
+
+h2 {
+    color: blue;
+    font-size: 25px;
+    text-align: center;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    margin: 0px;
+    padding: 0px;
+}
+
+.rojo {
+    color: red;
+}
+
+p.rojo {
+    background-color: yellow;
+}
+
+#parrafo {
+    background-color: grey;
+}
