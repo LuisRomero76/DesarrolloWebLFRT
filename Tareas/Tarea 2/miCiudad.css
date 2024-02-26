@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(171, 111, 71);
+}
+
+a {
+    margin: 110px;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px; 
+    background-color: #942d00;
+    border-radius: 0px 30px;
+}
+
+h1 {
+    text-align: center;
+    font-family: cursive;
+    color: #752401;
+    font-size: 40px;
+}
+
+video {
+    margin-top: 100px;
+    margin-left: 80px;
+    float: left;
+}
+
+dt {
+    margin-left: 550px;
+    font-family: cursive;
+    font-size: 15px;
+    color: #942d00;
+}
+
+dd {
+    margin-left: 580px;
+    margin-right: 80px;
+    font-size: 20px;
+}
+

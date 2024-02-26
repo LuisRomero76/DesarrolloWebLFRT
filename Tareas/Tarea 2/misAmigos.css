@@ -1,0 +1,37 @@
+body {
+    background-color: tan;
+}
+
+a {
+    margin: 110px;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px; 
+    background-color: #575646;
+    border-radius: 0px 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #575646;
+    font-family: cursive;
+}
+
+dt {
+    margin-left: 50px;
+    font-size: 30px;
+    font-family: cursive;
+    font-style: italic;
+}
+
+img {
+    margin-left: 530px;
+}
+
+p {
+    text-align: center;
+}
