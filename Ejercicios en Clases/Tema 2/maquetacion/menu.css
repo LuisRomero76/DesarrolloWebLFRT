@@ -1,0 +1,15 @@
+
+
+a {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+
+nav.vertical li a:hover {
+    background-color: rgb(10, 217, 69);
+}

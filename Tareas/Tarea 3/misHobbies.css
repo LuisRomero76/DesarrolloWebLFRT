@@ -1,0 +1,39 @@
+body {
+    background-color: cadetblue;
+}
+
+.boton {
+    margin: 110px;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px; 
+    background-color: #4327aa;
+    border-radius: 0px 30px;
+}
+
+.titulo {
+    font-family: cursive;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(35, 0, 162);
+}
+
+.subtitulo {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 50px;
+    color: rgb(35, 0, 162);
+}
+
+.imagen {
+    margin-left: 560px;
+}
+
+.contexto {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
