@@ -2,8 +2,16 @@ body {
     background-color: tan;
 }
 
+.enlaces {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(88, 18, 6, 0.54);
+    height: 100px;
+    border: 3px solid black;
+}
+
 a {
-    margin: 110px;
     font-family:'Courier New', Courier, monospace;
     font-style: italic;
     font-size: 20px;
@@ -12,6 +20,21 @@ a {
     padding: 10px; 
     background-color: #575646;
     border-radius: 0px 30px;
+    border: 1px solid black;
+}
+
+.amigos {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.facultad {
+    width: 50%;
+}
+
+.colegio {
+    width: 50%;
 }
 
 h1 {
@@ -21,17 +44,15 @@ h1 {
     font-family: cursive;
 }
 
+img {
+    display: flex;
+    margin: auto;
+}
+
 dt {
-    margin-left: 50px;
     font-size: 30px;
     font-family: cursive;
     font-style: italic;
-}
-
-img {
-    margin-left: 530px;
-}
-
-p {
-    text-align: center;
+    background-color: #575646;
+    border: 15px solid tan;
 }

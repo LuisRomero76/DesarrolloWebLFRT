@@ -2,16 +2,24 @@ body {
     background-color: cadetblue;
 }
 
+.enlaces {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: #4327aa;
+}
+
 .boton {
-    margin: 110px;
     font-family:'Courier New', Courier, monospace;
     font-style: italic;
     font-size: 20px;
     color: white;
     text-decoration: none;
     padding: 10px; 
-    background-color: #4327aa;
+    background-color: #6e54c0;
     border-radius: 0px 30px;
+    border: 1px solid black;
 }
 
 .titulo {
@@ -21,19 +29,42 @@ body {
     color: rgb(35, 0, 162);
 }
 
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+.musica {
+    width: 23%;
+}
+
+.voley {
+    width: 23%;
+}
+
+.programar {
+    width: 23%;
+}
+
+.conducir {
+    width: 23%;
+}
+
 .subtitulo {
     font-size: 20px;
     font-style: italic;
-    margin-left: 50px;
     color: rgb(35, 0, 162);
 }
 
 .imagen {
-    margin-left: 560px;
+    display: flex;
+    width:250px;
+    margin: auto;
 }
 
 .contexto {
     text-align: center;
-    margin-left: 100px;
-    margin-right: 100px;
 }

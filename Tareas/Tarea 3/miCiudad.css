@@ -2,8 +2,25 @@ body {
     background-color: rgb(171, 111, 71);
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 85%;
+    height: 800px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    padding: 2%;
+    width: 96%;
+}
+
 a {
-    margin: 110px;
     font-family:'Courier New', Courier, monospace;
     font-style: italic;
     font-size: 20px;
@@ -14,6 +31,14 @@ a {
     border-radius: 0px 30px;
 }
 
+.contenido {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+
+
 h1 {
     text-align: center;
     font-family: cursive;
@@ -21,22 +46,13 @@ h1 {
     font-size: 40px;
 }
 
-video {
-    margin-top: 100px;
-    margin-left: 80px;
-    float: left;
-}
-
 dt {
-    margin-left: 550px;
     font-family: cursive;
     font-size: 15px;
     color: #942d00;
 }
 
 dd {
-    margin-left: 580px;
-    margin-right: 80px;
     font-size: 20px;
 }
 
