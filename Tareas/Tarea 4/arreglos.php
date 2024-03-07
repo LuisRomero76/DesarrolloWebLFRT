@@ -10,6 +10,8 @@
         $arreglo = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
         $pares = array();
         $impares = array();
+
+        echo "Arreglo introducido: ". implode(" , ",$arreglo) .".<br><br>";
         
         foreach($arreglo as $n) {
             if ($n % 2 == 0) {
@@ -18,8 +20,8 @@
             $impares[]=$n;
         }
         
-        echo "Numeros pares: ". implode(" , ",$pares) ."<br><br>";
-        echo "Numeros impares: ". implode(" , ",$impares). "<br>";
+        echo "Numeros pares: ". implode(" , ",$pares) .".<br><br>";
+        echo "Numeros impares: ". implode(" , ",$impares).".";
     ?>
 
 </body>

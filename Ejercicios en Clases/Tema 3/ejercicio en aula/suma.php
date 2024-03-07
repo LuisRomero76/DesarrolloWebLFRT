@@ -6,6 +6,4 @@ for ($i=0; $i<$numero; $i++) {
 }
 
 echo "El valor de la suma es: $suma";
-
-
 ?>
