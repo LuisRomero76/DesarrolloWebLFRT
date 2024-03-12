@@ -1,0 +1,132 @@
+.primero {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.busqueda {
+    display: flex;
+    width: 30%;
+}
+
+.amarillo {
+    display: flex;
+    text-decoration: none;
+    background-color: yellow;
+    padding: 20px;
+}
+.blanco {
+    display: flex;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.icono {
+    padding: 15px;
+    width: 25px;
+}
+
+
+.segundo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+.clasificar {
+    display: flex;
+}
+
+.titulo {
+    margin-top: auto;
+    font-size: 80px;
+    color: green;
+}
+
+.imagenesdos {
+    width: 70px;
+}
+
+
+.tercero {
+    background-color: black;
+    display: flex;
+    height: 65px;
+}
+
+.enlaces {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.enlacesverde {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    background-color: darkgreen;
+    padding: 20px;
+}
+.enlacesrosa {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(255, 0, 136);
+    padding: 20px;
+}
+.enlacesnaranja {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(226, 130, 41);
+    padding: 20px;
+}
+
+.enlaceslila {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(128, 78, 209);
+    padding: 20px;
+}
+
+.cuarto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(230, 230, 230);
+}
+
+.quinto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+}
+
+.informacion {
+    margin: 1%;
+}

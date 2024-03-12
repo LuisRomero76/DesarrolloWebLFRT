@@ -1,0 +1,108 @@
+
+.contenedor {
+    width: 900px;
+    height: auto;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.superior {
+    display: flex;
+    flex-direction: row;
+}
+img {
+    width: 90px;
+}
+.logouniversidad {
+    width: 220px;
+}
+.universidad {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.titulo {
+    color: #FF0000;
+}
+.subtitulo {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+.rojo {
+    color: #FF0000;
+}
+.amarillo {
+    color: #FFFF00;
+}
+.verde {
+    color:#00B050;
+}
+.subceleste {
+    color:#4C9BD3;
+}
+p {
+    text-align: center;
+}
+.celeste {
+    background-color: #4C9BD3;
+}
+
+.logofacultad {
+    width: 150px;
+}
+
+.medio {
+    display: flex;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+.autentificacion {
+    width: 770px;
+    text-align: start;
+}
+.entradadatos {
+    text-align: start;
+}
+.enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#366F91;
+    width: 130px;
+    height: 150px;
+    border-left: 1px solid black;
+}
+a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    width: 100px;
+    border: 1px solid;
+}
+.fondorojo {
+    background-color: #FF0000;
+}
+.fondoamarillo {
+    background-color: #FFFF00;
+}
+.fondoverde {
+    background-color: #00B050;
+}
+.fondoblanco {
+    background-color: white;
+}
+
+.inferior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4C9BD3;
+    height: 50px;
+}
+
+
