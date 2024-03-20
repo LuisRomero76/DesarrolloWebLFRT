@@ -1,12 +1,12 @@
 <?php
 include ('pila.php');
 session_start();
-if (!isset($_SESSION['p'])) {
+if (!isset($_SESSION['num'])) {
 echo "error no hay elementos";
 }
 else
 {
-$valor=$_SESSION['p']->eliminar();
+$valor=$_SESSION['num']->eliminar();
 echo "el valor eliminado es ".$valor;
 }
 ?>
