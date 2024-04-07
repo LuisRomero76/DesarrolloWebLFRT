@@ -6,7 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+    include("conexion.php");
+    include("verificar.php");
+    include("permisos.php");
+
+    $sql = "SELECT id,nombre FROM ocupaciones";
+    $resultado = $con->query($sql);
+    ?>
+    
     <h1>Insertar persona</h1>
+
     <form action="insertar.php" method="post">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombres">
@@ -22,7 +32,13 @@
         <input type="radio" name="sexo" value="F">Femenino
         <br>
         <label for="ocupacion">Ocupacion:</label>
-        <input type="text" name="ocupacion">
+        <select name="ocupacion">
+            <?php 
+            while ($ocupacion = $resultado->fetch_assoc()) {
+            ?>
+            <option value="<?php echo $ocupacion["id"] ?>"><?php echo $ocupacion["nombre"]?> </option>
+            <?php } ?>
+        </select>
         <br>
         <input type="submit" value="Insertar">
     </form>
