@@ -1,0 +1,6 @@
+r Sólo lectura
+r+ Lectura y escritura
+w Sólo escritura, si no existe el archivo lo crea, si existe lo trunca
+w+ Lectura y escritura, si existe lo trunca, si no existe lo crea
+a Modo append sólo escritura si no existe lo crea
+a+ Modo append lectura y escritura si no existe lo crea

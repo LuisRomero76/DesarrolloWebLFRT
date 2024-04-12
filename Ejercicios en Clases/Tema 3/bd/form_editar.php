@@ -13,7 +13,7 @@
     include("verificar.php");
     include("permisos.php");
 
-    $sql= "SELECT id,nombres,apellidos,edad,sexo,ocupacion_id FROM personas where id=".$id;
+    $sql= "SELECT id, fotografia, nombres, apellidos, edad, sexo, ocupacion_id FROM personas where id=".$id;
     $resultado = $con->query($sql);
     $datos = $resultado->fetch_assoc();
 
@@ -22,8 +22,12 @@
     ?>
 
     <h1>Editar persona</h1>
-    <form action="editar.php" method="post">
+    <form action="editar.php" method="post" enctype="multipart/form-data">
+        <img src="imagenes/<?php echo $datos["fotografia"];?>"> <br>
+        <label for="fotografia">Fotografia</label>
+        <input type="file" name="fotografia"><br>
         <input type="hidden" name="id" value="<?php echo $datos["id"];?>">
+        <input type="hidden" name="foto" value="<?php echo $datos["fotografia"];?>">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombres" value="<?php echo $datos["nombres"];?>">
         <br>

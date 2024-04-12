@@ -17,7 +17,9 @@
     
     <h1>Insertar persona</h1>
 
-    <form action="insertar.php" method="post">
+    <form action="insertar.php" method="post" enctype="multipart/form-data">
+        <label for="fotografia">Fotografia</label>
+        <input type="file" name="fotografia"> <br>
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombres">
         <br>

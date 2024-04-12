@@ -9,7 +9,22 @@ $edad = $_POST["edad"];
 $sexo = $_POST["sexo"];
 $ocupacion_id = $_POST["ocupacion"];
 
-$sql = "UPDATE personas set nombres='$nombre', apellidos= '$apellido', edad= '$edad', sexo='$sexo', ocupacion_id='$ocupacion_id' WHERE id=$id";
+
+if ($_FILES['fotografia']['name']!='') 
+{
+    $nombres=$_FILES["fotografia"]["name"];
+    $temp=$_FILES["fotografia"]["tmp_name"];
+    $arreglo=explode(".", $nombres);
+    $extension=$arreglo[1];
+    $nuevonombre=uniqid().".".$extension;
+    copy ($temp,"imagenes/".$nuevonombre);   
+}else {
+    $nuevonombre=$_POST["foto"];
+}
+
+
+$sql = "UPDATE personas set nombres='$nombre', apellidos= '$apellido',
+edad= '$edad', sexo='$sexo', ocupacion_id='$ocupacion_id', fotografia='$nuevonombre' WHERE id=$id";
 
 $resultado = $con->query($sql);
 if(!$resultado){
