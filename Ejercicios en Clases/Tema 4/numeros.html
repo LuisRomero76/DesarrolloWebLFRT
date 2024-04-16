@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <script>
+
+        var num1 = parseInt(prompt("Introduce N° de Filas: "));
+        var num2 = parseInt(prompt("Introduce N° de columnas: "));
+        
+        document.write("<table class='tabla'>");
+        for (var i = 0; i < num1; i++) {
+            document.write("<tr>");
+                for (var j = 0; j < num2; j++) {
+                    document.write("<td>&nbsp;</td>");
+                    document.write("</tr>")
+                }
+            }
+        document.write("</table>");
+
+    </script>
+
+
+</body>
+</html>

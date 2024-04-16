@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabla {
+            border-collapse: collapse;
+        }
+
+        .par {
+            border: 1px solid black;
+            padding: 15px;
+            background-color: aqua;
+        }
+
+        .impar {
+            border: 1px solid black;
+            padding: 15px;
+            background-color: red;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <script>
+
+        var num1 = parseInt(prompt("Introduce N° de Filas: "));
+        var num2 = parseInt(prompt("Introduce N° de columnas: "));
+        
+        html='<table class="tabla">';
+
+        for (var i = 0; i < num1; i++) {
+            html+="<tr>";
+            
+            for (var j = 0; j < num2; j++) {
+                if (j%2 == 0) {
+                    html+=`<td class="par">${j}</td>`;
+                } else {
+                    html+=`<td class="impar">${j}</td>`;
+                }
+            }
+            html+="</tr>";
+        }
+        html+="</table>";
+        document.write(html);
+
+    </script>
+
+
+</body>
+</html>
