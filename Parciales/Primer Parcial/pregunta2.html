@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formulario {
+            display: flex;
+            align-items: center;
+            border: 3px solid green;
+            width: 600px;
+            height: 200px;
+        }
+
+        .mes_anio {
+            display: flex;
+            justify-content: space-around;
+            width: 500px;
+            margin-bottom: 20px;
+        }
+
+        .select {
+            border: 3px solid green;
+            padding: 10px;
+        }
+
+        .tamanio {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .boton {
+            background-color: rgb(113, 180, 46);
+            color: white;
+            border-radius: 5px;
+            border: 3px solid rgb(0, 85, 0);
+            width: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="formulario">
+        <form action="calendario.php" method="post">
+            <div class="mes_anio">
+                <label for="mes">Mes</label>
+                <select class="select" name="meses">
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                <label for="anio">Año</label>
+                <input class="select" type="number" name="anio">
+            </div>
+            <div class="tamanio">
+                <label for="tamanio">Tamaño</label>
+                <input class="select" type="number" name="tamanio">
+                <input class="boton" type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

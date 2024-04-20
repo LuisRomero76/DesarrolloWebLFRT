@@ -7,13 +7,11 @@ function factorial(n) {
 }
 
 function fibonacci(n) {
-    var a = 0;
-    var b = 1;
-    var r = 0;
-    for (var i = 0; i < n; i++) {
-        r = a + b;
-        a = b;
-        b = r;
+
+    if (n<=1) {
+        return n;
+    } else {
+        return  fibonacci(n-1) + fibonacci(n-2);
     }
-    return r;
+
 };

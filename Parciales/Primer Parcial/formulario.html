@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            width: 900px;
+            margin: auto;
+        }
+        
+        .arriba {
+            display: flex;
+            border: 1px solid black;
+            justify-content: space-around;
+            height: 200px;
+        }
+        .dato1 {
+            border-right: 1px solid black;
+            width: 400px;
+        }
+        label {
+            color: blue;
+        }
+        .naranja {
+            border: 3px solid rgb(255, 132, 0);
+        }
+        .boton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            height: 60px;
+
+        }
+        a{
+            border: 3px solid rgb(115, 0, 0);
+            background-color: rgb(195, 74, 74);
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <form action="insertar.php" method="post" enctype="multipart/form-data">
+        <div class="arriba">
+            <div class="dato1">
+                <label for="imagen">Imagen</label>
+                <input type="file" name="imagen"><br><br>
+                <label for="titulo">Titulo</label>
+                <input class="naranja" type="text" name="titulo"> <br><br>
+                <label for="autor">Autor</label>
+                <input class="naranja" type="text" name="autor"><br><br>
+                <label for="editorial">Editorial</label>
+                <select class="naranja" name="editorial">
+                    <option value="castellana">Castellana</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="santillana">Santillana</option>
+                </select><br><br>
+                <label for="anio">Año</label>
+                <input class="naranja" type="number" name="anio">
+            </div>
+            <div class="dato2">
+                <label for="imagen">Imagen</label>
+                <input type="file" name="imagen"><br><br>
+                <label for="titulo">Titulo</label>
+                <input class="naranja" type="text" name="titulo"> <br><br>
+                <label for="autor">Autor</label>
+                <input class="naranja" type="text" name="autor"><br><br>
+                <label for="editorial">Editorial</label>
+                <select class="naranja" name="editorial">
+                    <option value="castellana">Castellana</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="santillana">Santillana</option>
+                </select><br><br>
+                <label for="anio">Año</label>
+                <input class="naranja" type="number" name="anio">
+            </div>
+        </div>
+        <div class="boton">
+            <a href="mostrar.php">Registrar</a>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
