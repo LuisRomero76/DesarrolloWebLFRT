@@ -1,0 +1,97 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 900px;
+    margin:auto;
+    font-size: auto;
+}
+
+.superior {
+    display: flex;
+    background-color: rgb(183, 207, 230);
+    width: 100%;
+    height: 200px;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    width: 200px;
+    text-align: end;
+}
+.logo > img {
+    width: 100px;
+}   
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    width: 680px;
+}
+.mayusculasuperior {
+    font-size: 30px;
+}
+.mayuscula {
+    font-size: 26px;
+}
+.universidad {
+    width: 510px;
+    font-size: 24px;
+    color: red;
+}
+.facultad {
+    display: flex;
+    justify-content: space-between;
+    width: 510px;
+}
+.facu {
+    color: blue;
+}
+.rojo {
+    color: red;
+}
+.amarillo {
+    color: yellow;
+}
+.verde {
+    color: green;
+}
+.carrera {
+    width: 510px;
+    text-align: center;
+}
+
+.inferior {
+    display: flex;
+    flex-direction: row;
+    height: 180px;
+    justify-content: space-between;
+}
+.uno {
+    display: flex;
+    width: 120px;
+    background-color: gray;
+    border-right: 1px solid black;
+}
+.enlaces {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100px;
+    background-color: white;
+}
+a {
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+}
+.dos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 780px;
+}
