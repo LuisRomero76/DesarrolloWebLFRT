@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,15 @@
 <body>
     
     <script>
-        var dias = ["Lunes", "Martes","Miercoles","Jueves", "Viernes", "Sabado", "Dommingo"];
-        var meses = ["Enero","Febrero","Marzo","Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        var dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Dommingo"];
+        var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
         var i;
-        document.write("<h2>Meses</h2> <br>")
+        document.write("<h2>Meses</h2>")
         for(i in meses) {
             document.writeln(meses[i] + "<br>");
         }
 
-        document.write("<h2>Dias </h2><br>")
+        document.write("<h2>Dias </h2>")
         for(i in dias) {
             document.writeln(dias[i] + "<br>");
         }
@@ -24,12 +24,14 @@
         meses.sort();
         console.log(meses);
         
-        for (let i; i < meses.length; i++) {
+        document.write("<h2>Meses Ordenados </h2>")
+        for (i; i < meses.length; i++) {
             document.writeln(meses[i] + "<br>");
         }
 
-        document.write("<h2>Meses Ordenados </h2><br>")
-        meses.forEach(function (elemento, indice, array) {
+        dias.sort();
+        document.write("<h2>Dias Ordenados</h2>")
+        dias.forEach(function (elemento, indice, array) {
             document.writeln(`dia[${indice}]= ${elemento} <br>`);
         });
 

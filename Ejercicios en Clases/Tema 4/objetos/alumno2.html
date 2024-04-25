@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alumno = {
+            nombre: "Juan",
+            edad: 20,
+            cu: "35-5328",
+            materias: ["Matematicas", "Fisica", "Programacion"],
+            mostrar : function () {
+                document.write("El alumno " + this.nombre + " tiene " + this.edad + " años ");
+            },
+            mostrarMaterias : function () {
+                document.write(" y cursa las materias: ");
+                document.write("<ul>")
+                for (var i in this.materias) {
+                    document.write("<li>"+this.materias[i]+ "</li>")
+                }
+                document.write("</ul>");
+            }
+        }
+        alumno.mostrar();
+        document.write("<br>");
+        alumno.mostrarMaterias();
+        console.log(alumno);
+    </script>
+</body>
+</html>
