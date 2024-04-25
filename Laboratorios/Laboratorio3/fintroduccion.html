@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .contenedor {
+            border: 1px solid black;
+            width: 600px;
+            margin: auto;
+            height: 100px;
+        }
+
+        .datos {
+            display: flex;
+            justify-content: space-evenly;
+            height: 50px;
+            align-items: center;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .boton {
+            width: 100px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="contenedor"> 
+        <form action="fdatos.php" method="post">
+            <div class="datos">
+                <label for="n">Introduzca Número de Alumnos: </label>
+                <input type="number" name="numero">
+            </div>
+            <div class="botones">
+                <input class="boton" type="submit" value="Enviar">
+                <input class="boton" type="reset" value="Limpiar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
