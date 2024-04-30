@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #x1 {
+            border: 2px solid black;
+            padding: 10px;
+            width: max-content;
+        }
+        #x2 {
+            border: 2px solid black;
+            padding: 10px;
+            width: max-content;
+        }
+        .contenedor {
+            display: flex;
+        }
+        #i1 {
+            padding: 10px;
+        }
+        #i2 {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="a">Introducir a: </label>
+        <input type="number" name="a" id="a"><br>
+        <label for="b">Introducir b: </label>
+        <input type="number" name="b" id="b"><br>
+        <label for="c">Introducir c: </label>
+        <input type="number" name="c" id="c"><br>
+        <input type="button" value="Calcular Raiz" id="boton"><br><br>
+        <div id="ecuacion"></div><br>
+        <div class="contenedor">
+            <div id="x1"></div><span id="i1"></span>
+        </div>
+        <div class="contenedor">
+            <div id="x2"></div><span id="i2"></span>
+        </div>
+
+        <script>
+            document.getElementById("boton").addEventListener("click", ()=> {
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                var c = document.getElementById("c").value;
+
+                var discriminante = b * b - 4 * a * c;
+                
+                document.getElementById("ecuacion").innerHTML ="La ecuación es: " + a + "x2 + " + b + "x + " + c +" = 0";
+
+                if (discriminante < 0) {
+                    document.getElementById("x1").style.color="red";
+                    document.getElementById("x2").style.color="red";
+                    document.getElementById("i1").style.color="red";
+                    document.getElementById("i2").style.color="red";
+                    document.getElementById("x1").innerHTML = ( - b + Math.sqrt(-discriminante)) / 2*a;
+                    document.getElementById("i1").innerHTML = "i";
+                    document.getElementById("x2").innerHTML = ( - b - Math.sqrt(-discriminante)) / 2*a;
+                    document.getElementById("i2").innerHTML = "i";
+                } else {
+                    document.getElementById("x1").style.color="black";
+                    document.getElementById("x2").style.color="black";
+                    document.getElementById("x1").innerHTML = ( - b + Math.sqrt(discriminante)) / 2*a;
+                    document.getElementById("i1").innerHTML = "";
+                    document.getElementById("x2").innerHTML = ( - b - Math.sqrt(discriminante)) / 2*a;
+                    document.getElementById("i2").innerHTML = "";
+                }
+            })
+        </script>
+
+    </form>
+
+</body>
+</html>
