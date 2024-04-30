@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="a">Introducir a: </label>
+        <input type="number" name="a" id="a">
+        <br><br>
+        <label for="b">Introducir b: </label>
+        <input type="number" name="b" id="b">
+        <br><br>
+        <label>Seleccionar operación</label>
+        <select name="operacion" id="ope">
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+        </select>
+        <br><br>
+        <div id="resultado" style="border: 3px solid red; padding: 50px; width: 200px; text-align: center; font-size: 25px;">&nbsp;</div>
+
+        <script>
+            document.getElementById("ope").addEventListener("click", () => {
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                var operacion = document.getElementById("ope").value;
+
+                if (operacion === "sumar") {
+                    document.getElementById("resultado").innerHTML = parseInt(a) + parseInt(b);
+                }else if (operacion === "restar") {
+                    document.getElementById("resultado").innerHTML = parseInt(a) - parseInt(b); 
+                }else if (operacion === "multiplicar") {
+                    document.getElementById("resultado").innerHTML = parseInt(a) * parseInt(b);
+                }else {
+                    document.getElementById("resultado").innerHTML = parseInt(a) / parseInt(b);
+                }
+            });
+        </script>
+
+    </form>
+</body>
+</html>

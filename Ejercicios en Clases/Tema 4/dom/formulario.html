@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="recibir.php" method="get">
+        <input type="text" name="nombre" value="carlos"><br>
+        Estado Civil
+        <input type="radio" name="estado" value="soltero">Soltero
+        <input type="radio" name="estado" value="casado">Casado
+        <input type="radio" name="estado" value="divorciado">Divorciado
+        <input type="radio" name="estado" value="viudo">Viudo
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script type="text/javascript">
+        var nom = document.getElementsByName("nombre");
+        console.log(nom);
+    </script>
+
+</body>
+</html>
