@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            width: 50px;
+            margin: 5px;
+            height: 30px;
+        }
+        #mensaje {
+            text-align: center;
+            background-color: rgba(0, 85, 255, 0.794);
+            color: white;
+            width: 200px;
+            height: 30px;
+            align-content: center;
+            margin: auto;
+            margin-top: 10px    ;
+            border: 1px solid rgba(0, 58, 174, 0.794);
+        }
+    </style>
+</head>
+<body>
+    <h2>Juego Tres en Raya</h2>
+    <div id="contenido">
+        <div>
+            <button id="c1" onclick="verificar(1)"></button>
+            <button id="c2" onclick="verificar(2)"></button>
+            <button id="c3" onclick="verificar(3)"></button>
+        </div>
+        <div>
+            <button id="c4" onclick="verificar(4)"></button>
+            <button id="c5" onclick="verificar(5)"></button>
+            <button id="c6" onclick="verificar(6)"></button>
+        </div>
+        <div>
+            <button id="c7" onclick="verificar(7)"></button>
+            <button id="c8" onclick="verificar(8)"></button>
+            <button id="c9" onclick="verificar(9)"></button>
+        </div>
+        <div id="mensaje">
+            Turno X
+        </div>
+    </div>
+
+
+    <script>
+        var turno = "X";
+
+        function verificar(valor) {
+            var mensaje = document.getElementById("mensaje");
+            var dibujar = document.getElementById('c'+valor);
+            var mensaje_ocupado = 'La casilla ya esta ocupada.';
+            if (dibujar.innerText == '') {
+                dibujar.innerText = turno;
+                if (turno == 'X') {
+                    turno = 'O';
+                }else {
+                    turno='X';
+                }
+                mensaje.innerHTML = 'Turno ' + turno;
+            } else {
+                document.getElementById("mensaje").innerHTML = mensaje_ocupado;
+            }
+        }
+    </script>
+
+</body>
+</html>
