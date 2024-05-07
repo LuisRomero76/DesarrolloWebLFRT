@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Lista de Utiles</h2>
+        <label for="utiles">Util</label>
+        <input type="text" name="util" id="nombre_util">
+        <input type="button" value="Añadir" id="mandar">
+
+    </div>
+
+    <ul id="lista"></li></ul>
+
+    <script>
+        document.getElementById("mandar").addEventListener("click", () => {
+            var lista = document.getElementById("lista");
+            var nombre = document.getElementById("nombre_util").value;
+
+            lista.innerHTML+="<li>"+ nombre +"</li>";
+        })
+    </script>
+
+
+
+</body>
+</html>
