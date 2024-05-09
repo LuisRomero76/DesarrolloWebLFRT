@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+        }
+       .imagen {
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <img class="imagen" id="img1" onmouseover="mostrar('img1')" onmouseleave="normal('img1')" src="imagenes/400.png">
+        <img class="imagen" id="img2" onmouseover="mostrar('img2')" onmouseleave="normal('img2')" src="imagenes/arquitecturacomputadoras.jpg">
+        <img class="imagen" id="img3" onmouseover="mostrar('img3')" onmouseleave="normal('img3')" src="imagenes/bigdata.jpg">
+        <img class="imagen" id="img4" onmouseover="mostrar('img4')" onmouseleave="normal('img4')" src="imagenes/CursoAndroid.jpg">
+        <img class="imagen" id="img5" onmouseover="mostrar('img5')" onmouseleave="normal('img5')" src="imagenes/ScrumIngenieriaSoftware.jpg">
+        <img class="imagen" id="img6" onmouseover="mostrar('img6')" onmouseleave="normal('img6')" src="imagenes/arquitecturacomputadoras.jpg">
+        <img class="imagen" id="img7" onmouseover="mostrar('img7')" onmouseleave="normal('img7')" src="imagenes/introduccioinformatica.jpg">
+        <img class="imagen" id="img8" onmouseover="mostrar('img8')" onmouseleave="normal('img8')" src="imagenes/usfx.png">
+        <img class="imagen" id="img9" onmouseover="mostrar('img9')" onmouseleave="normal('img9')" src="imagenes/CursoAndroid.jpg">
+        <img class="imagen" id="img10" onmouseover="mostrar('img10')" onmouseleave="normal('img10')" src="imagenes/arquitecturacomputadoras.jpg"">
+    </div>
+
+    <script>
+        function mostrar(id) {
+            document.getElementById(id).style.width='200px';
+            document.getElementById(id).style.height='200px';
+        }
+        function normal(id) {
+            document.getElementById(id).style.width='100px';
+            document.getElementById(id).style.height='100px';
+        }
+    </script>
+</body>
+</html>

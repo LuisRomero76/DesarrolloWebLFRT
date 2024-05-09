@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Parrafos</h2>
+    <input type="text" id="texto">
+    <div id="lista_parrafo">
+
+    </div>
+
+    <script>
+        document.getElementById("texto").addEventListener("keypress", () => {
+            
+            if (event.key == "Enter") {
+                var elemento = document.createElement('p');
+                elemento.innerHTML = document.getElementById("texto").value;
+                document.getElementById("lista_parrafo").appendChild(elemento);
+                
+                document.getElementById("texto").value = ''
+            }
+            })
+    </script>
+</body>
+</html>

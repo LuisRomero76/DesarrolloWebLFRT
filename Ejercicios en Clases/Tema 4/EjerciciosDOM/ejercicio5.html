@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenido {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: max-content;
+            height: 30px;
+        }
+        .contenido>div {
+            color: red;
+            margin-left: 10px;
+        }
+        label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class='contenido'>
+            <label>Nombre:</label>
+            <input type='text' id='nombre'>
+            <div id='falta_nombre'></div>
+        </div>
+        <div class='contenido'>
+            <label>Correo Electrónico:</label>
+            <input type='email' id='correo'>
+            <div id='falta_correo'></div>
+        </div>
+        <div class='contenido'>
+            <label>Mensaje: </label>
+            <input type='text' id='mensaje'>
+            <div id='falta_mensaje'></div>
+        </div>
+        <button type='button' onclick='enviar()'>Enviar</button>
+    </form>
+
+    <script>
+        function enviar() {
+            var nombre = document.getElementById('nombre').value;
+            var correo = document.getElementById('correo').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            var falta_nombre = document.getElementById('falta_nombre');
+            var falta_correo = document.getElementById('falta_correo');
+            var falta_mensaje = document.getElementById('falta_mensaje');
+
+            var mensaje_error = 'Debe completar este campo';
+            var confirmacion = 'Formulario Enviado Correctamente'
+
+            if (nombre == '') {
+                falta_nombre.innerHTML = mensaje_error;
+            } else {
+                falta_nombre.innerHTML = '';
+            }
+
+            if (correo == '') {
+                falta_correo.innerHTML = mensaje_error;
+            } else {
+                falta_correo.innerHTML = '';
+            }
+
+            if (mensaje == '') {
+                falta_mensaje.innerHTML = mensaje_error;
+            } else {
+                falta_mensaje.innerHTML = '';
+            }
+
+            if (nombre && correo && mensaje) {
+                alert(confirmacion);
+                document.getElementById('nombre').value = '';
+                document.getElementById('correo').value = '';
+                document.getElementById('mensaje').value = '';
+            }
+
+        }
+    </script>
+
+</body>
+</html>
