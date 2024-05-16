@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenido {
+            width: max-content;
+            margin: auto;
+        }
+        #listado {
+            width: max-content;
+            margin: auto;
+        }
+        #elemento {
+            border: 1px solid black;
+            height: 30px;
+        }
+        button {
+            background-color: rgb(119, 185, 239);
+            padding: 10px;
+            width: 100px;
+            border-radius: 10px;
+            color: white;
+            border-color: rgb(99, 150, 192);
+        }
+        li {
+            list-style-type: circle;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <label>Elemento Lista: </label>
+        <input type="text" id="elemento">
+        <button onclick="agregar()">Añadir</button>
+    </div>
+    <div id="listado">
+        <ul id="lista">
+            
+        </ul>
+    </div>
+
+
+    <script>
+        function agregar() {
+            var elemento = document.getElementById('elemento').value;
+            var lista = document.getElementById('lista');
+            var subLista = document.createElement('li');
+            lista.appendChild(subLista).innerHTML = elemento;
+
+            if (elemento.indexOf(' de ') !== -1) {
+                subLista.style.backgroundColor = "yellow";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

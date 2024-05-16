@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tabla {
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        .contenedor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: auto;
+            width: 50%;
+        }
+
+        .contenedor>div {
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+        }
+
+
+        button {
+            padding: 10px;
+            width: 100px;
+            margin: 5px;
+        }
+
+        th {
+            padding: 15px;
+            background-color: rgb(186, 202, 255);
+        }
+        td {
+            padding: 15px;
+        }
+
+        .filaPar {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table id="tabla" border="1">
+        <tr>
+            <th>nro</th>
+            <th>Apellido <br>Nombres</th>
+            <th>Edad</th>
+            <th>Materia</th>
+            <th>Nota</th>
+        </tr>
+
+    </table>
+
+    <div class="contenedor">
+        <div>
+            <label>Apellidos y Nombre: </label>
+            <input type="text" id="nombre">
+        </div>
+        <div>
+            <label>Edad: </label>
+            <input type="number" id="edad">
+        </div>
+        <div>
+            <label>Materia: </label>
+            <input type="text" id="materia">
+        </div>
+        <div>
+            <label>Nota: </label>
+            <input type="number" id="nota">
+        </div>
+        <button onclick="agregar()">Añadir</button>
+        <button onclick="encontrarMejorEstudiante()">Mejor Nota</button>
+    </div>
+    
+
+    <script>
+        estudiantes = {
+            apellidos_nombre: ['Juan Perez', 'Ricardo Luna', 'Teresa Tomasa', 'Favian Umbre'],
+            edad: [25, 30, 26, 24],
+            calificaciones: {
+                materia: ['SIS-256', 'SIS-258', 'SIS-256', 'SIS-258'],
+                nota: [83, 70, 84, 70]
+            }
+        };
+
+        var tabla = document.getElementById('tabla');
+
+        for (let i = 0; i < estudiantes.edad.length; i++) {
+
+            tabla.innerHTML+=`<tr class="${i % 2 === 1 ? 'filaPar' : ''}">
+                               <td>${i+1}</td>
+                               <td>${estudiantes.apellidos_nombre[i]}</td>
+                               <td>${estudiantes.edad[i]}</td>
+                               <td>${estudiantes.calificaciones.materia[i]}</td>
+                               <td>${estudiantes.calificaciones.nota[i]}</td> 
+                            </tr>`
+        }
+
+        function agregar() {
+            var nombre = document.getElementById('nombre').value;
+            var edad = document.getElementById('edad').value;
+            var materia = document.getElementById('materia').value;
+            var nota = document.getElementById('nota').value;
+
+            estudiantes.apellidos_nombre.push(nombre);
+            estudiantes.edad.push(edad);
+            estudiantes.calificaciones.materia.push(materia);
+            estudiantes.calificaciones.nota.push(nota);
+
+
+            var cantidad = estudiantes.apellidos_nombre.length;
+
+            tabla.innerHTML+=`<tr class="${cantidad % 2 == 0 ? 'filaPar' : ''}">
+                               <td>${cantidad}</td>
+                               <td>${nombre}</td>
+                               <td>${edad}</td>
+                               <td>${materia}</td>
+                               <td>${nota}</td> 
+                            </tr>`
+        }
+
+        function encontrarMejorEstudiante() {
+            var mejorNota = Math.max(...estudiantes.calificaciones.nota);
+            var indiceMejorNota = estudiantes.calificaciones.nota.indexOf(mejorNota);
+            var filas = tabla.getElementsByTagName('tr');
+            filas[indiceMejorNota + 1].style.backgroundColor = 'red';
+        }
+
+    </script>
+    
+</body>
+</html>
