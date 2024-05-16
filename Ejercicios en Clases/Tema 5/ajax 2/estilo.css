@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+.nav {
+    display: flex;
+    background: linear-gradient(90deg, black, gray);
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: linear-gradient(90deg, white, gray);
+    color: black;
+}
+a:hover {
+    color:white;
+    background: linear-gradient(90deg, gray,black);
+}
