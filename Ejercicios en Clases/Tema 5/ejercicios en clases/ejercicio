@@ -1,0 +1,7 @@
+Realizar un programa en javascript  que por ajax llame a personas.php
+
+y con ese resultado renderize una tabla con filas impares de color gris
+y filas pares de color blanco, el encabezado debe ser fondo color azul
+letras blancas
+
+personas.php devuelve un json con un arreglo de objetos utilizar la base de datos bd_censo
