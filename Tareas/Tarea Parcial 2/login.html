@@ -1,0 +1,67 @@
+<style>
+    #form_login {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 250px;
+    }
+
+    .usuario{
+        margin-left: 15px;
+        input {
+            border: 2px solid green;
+            width: 80px;
+            height: 25px;
+        }
+    }
+    .password {
+        margin-left: 15px;
+        input {
+            border: 2px solid green;
+            width: 80px;
+            height: 25px;
+        }
+    }
+    .captcha {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        input {
+            border: 2px solid green;
+            width: 80px;
+            height: 25px;
+            margin: 10px;
+        }
+        img {
+            border: 2px solid green;
+            margin: 10px;
+        }
+    }
+    .boton_logueo {
+        margin-left: 15px;
+        width: 200px;
+        height: 30px;
+        border: 2px solid blue;
+        background-color: rgb(24, 120, 245);
+        color: white;
+    }
+
+</style>
+
+<form action="javascript:formLogin()" id="form_login">
+    <div class="usuario">
+        <label>Usuario: </label>
+        <input type="text" name="usuario" id="usuario">
+    </div>
+    <div class="password">
+        <label>Password: </label>
+        <input type="password" name="password" id="password">
+    </div>
+    <div class="captcha">
+        <label>Captcha</label>
+        <img src="capu-captcha.php">
+        <label>Captcha</label>
+        <input type="text" name="palabra" id="palabra">
+    </div>
+    <input class="boton_logueo" type="submit" value="Loguearse">
+</form>

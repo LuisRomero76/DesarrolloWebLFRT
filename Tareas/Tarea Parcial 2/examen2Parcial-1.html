@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+        }
+        .superior{
+            display: flex;
+            border: 1px solid green;
+            min-height: 250px;
+        }
+        #principal{
+            width: 80%;
+            min-height: 250px;
+            border-right: 1px solid green;
+        }
+        #menu {
+            background-color: yellow;
+            min-height: 250px;
+            width: 20%;
+        }
+        .inferior {
+            display: flex;
+        }
+        .boton_menu {
+            background-color: red;
+            color: white;
+            padding: 10px;
+        }
+        #mensaje {
+            text-align: center;
+            width: 95%;
+            min-height: 50px;
+            background-color: orange;
+            border: 1px solid blue;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="autorizador"></div>
+        <div class="superior">
+            <div id="principal">
+
+            </div>
+            <div id="menu">
+                
+            </div>
+        </div>
+        <div class="inferior">
+            <button class="boton_menu" onclick="generarBotones()">Menu</button>
+            <div id="mensaje">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
