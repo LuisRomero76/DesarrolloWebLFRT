@@ -62,36 +62,49 @@ divisionButton.addEventListener("click", () => {
 });
 
 function equal() {
+  let expression = section2.innerHTML;
   op = section1.innerHTML[section1.innerHTML.length - 1];
-  if (section2.innerHTML.length > 0) val2 = parseInt(section2.innerHTML);
-  else val2 = 0;
-  switch (op) {
-    case "+":
-      res = val1 + val2;
-      section1.innerHTML = `${val1}+${val2}`;
-      section2.innerHTML = `${res}`;
-      break;
-    case "-":
-      res = val1 - val2;
-      section1.innerHTML = `${val1}-${val2}`;
-      section2.innerHTML = `${res}`;
-      break;
-    case "*":
-      res = val1 * val2;
-      section1.innerHTML = `${val1}*${val2}`;
-      section2.innerHTML = `${res}`;
-      break;
-    case "/":
-      res = val1 / val2;
-      section1.innerHTML = `${val1}/${val2}`;
-      section2.innerHTML = `${res}`;
-      break;
-    case "^":
-      res = Math.pow(val1, val2);
-      section1.innerHTML = `${val1}<span style="font-size: 7px; display: flex; margin-bottom: 10px;">${val2}</span>`;
-      section2.innerHTML = `${res}`;
-    default:
-      break;
+  if (expression.includes("√")) {
+    let numero = parseFloat(expression.split("√")[1]);
+    res = Math.sqrt(numero);
+    section1.innerHTML = `√${numero}`;
+    section2.innerHTML = `${res}`;
+  } else if (expression.includes("log10(")) {
+    let numero = parseFloat(expression.split("log10(")[1]);
+    res = Math.log10(numero);
+    section1.innerHTML = `log10(${numero})`;
+    section2.innerHTML = `${res}`;
+  } else {
+    if (section2.innerHTML.length > 0) val2 = parseFloat(section2.innerHTML);
+    else val2 = 0;
+    switch (op) {
+      case "+":
+        res = val1 + val2;
+        section1.innerHTML = `${val1}+${val2}`;
+        section2.innerHTML = `${res}`;
+        break;
+      case "-":
+        res = val1 - val2;
+        section1.innerHTML = `${val1}-${val2}`;
+        section2.innerHTML = `${res}`;
+        break;
+      case "*":
+        res = val1 * val2;
+        section1.innerHTML = `${val1}*${val2}`;
+        section2.innerHTML = `${res}`;
+        break;
+      case "/":
+        res = val1 / val2;
+        section1.innerHTML = `${val1}/${val2}`;
+        section2.innerHTML = `${res}`;
+        break;
+      case "^":
+        res = Math.pow(val1, val2);
+        section1.innerHTML = `${val1}<span style="font-size: 7px; display: flex; margin-bottom: 10px;">${val2}</span>`;
+        section2.innerHTML = `${res}`;
+      default:
+        break;
+    }
   }
 }
 
@@ -130,10 +143,7 @@ document.getElementById("potencia").addEventListener("click", () => {
 });
 
 function raizCuadrada() {
-  val1 = parseFloat(section2.innerHTML);
-  res = Math.sqrt(val1);
-  section1.innerHTML = `√${val1}`;
-  section2.innerHTML = `${res}`;
+  section2.innerHTML += "√";
 }
 
 document.getElementById("raiz").addEventListener("click", () => {
@@ -160,10 +170,7 @@ document.getElementById("factorial").addEventListener("click", () => {
 });
 
 function logaritmo() {
-  val1 = parseFloat(section2.innerHTML);
-  res = Math.log10(val1);
-  section1.innerHTML = `log10(${val1})`;
-  section2.innerHTML = `${res}`;
+  section2.innerHTML += "log10(";
 }
 
 document.getElementById("logaritmo").addEventListener("click", () => {
